@@ -10,3 +10,31 @@ body {
 h1 {
     margin-bottom: 2vw;
 }
+
+.graphs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.risk-return-container {
+    width: 60vw;
+    height: auto;
+}
+
+.weight-graph-container {
+    width: 30vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.min-variance-point {
+    text-align: center;
+    width: 100%;
+    margin: auto
+}
+
+#min-var-table {
+    align-self: center;
+}

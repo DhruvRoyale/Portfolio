@@ -13,10 +13,51 @@
     </head>
 
     <body>
-        <h1>
-            Portfolio Optimisation
-        </h1>
+        <div class="main-container">
+            <h1>
+                Portfolio Optimisation
+            </h1>
 
+            <div class="graph-screen">
+                <div class="graphs">
+                    <div class="risk-return-container">
+                        <canvas id="risk-return"></canvas>
+                    </div>
+                    
+                    <div class="weight-graph-container">
+                        <canvas id="return-weight"></canvas>
+                        <canvas id="variance-weight"></canvas>
+                    </div>
+                </div>
+
+                <div class="min-variance-point">
+                    <table id="min-var-table">
+                        <tr>
+                            <td>Weight 1</td>
+                            <td>Weight 2</td>
+                            <td>Portfolio Return</td>
+                            <td>Portfolio Standard Deviation</td>
+                        </tr>
+                        <tr>
+                            <td id="w1"></td>
+                            <td id="w2"></td>
+                            <td id="port-return"></td>
+                            <td id="port-std-dev"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="data-enter"></div>
+
+                <div class="current-data">
+                    <table></table>
+                </div>
+            </div>
+
+            <div class="data-screen" hidden></div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
