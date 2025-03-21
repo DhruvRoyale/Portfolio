@@ -47,10 +47,35 @@
                     </table>
                 </div>
 
+                <div class="correlation">
+                    <div class="correlation-div-1">
+                        <label for="current-correl" id="current-correl-label">Current Correlation: </label>
+                        <input type="number" id="current-correl" name="current-correl" onchange="change_correl()"></input>
+                    </div>
+
+                    <div class="correlation-div-2">
+                        <button id="raise-correl" onclick="raise_correl()">+</button>
+                        <button id="reduce-correl" onclick="reduce_correl()">-</button>
+                        <button id="reset-correl" onclick="reset_correl()">Reset</button>
+                    </div>
+                </div>
+
                 <div class="data-enter"></div>
 
-                <div class="current-data">
-                    <table></table>
+                <div class="current-data-container">
+                    <button class="btn btn-primary mb-2" id="data-reveal" onclick="data_reveal()">Show Data</button>
+                    <div class="current-data">
+                        <table id="data-table" hidden>
+                            <tr>
+                                <th colspan="3" id="table-head">Data Used</th>
+                            </tr>
+                            <tr>
+                                <th>Time Period</th>
+                                <th id="asset-1-name"></th>
+                                <th id="asset-2-name"></th>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
