@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 body {
     background-color: #1c1c1c;
     color: #f2f2f2;
@@ -30,11 +36,108 @@ h1 {
 }
 
 .min-variance-point {
-    text-align: center;
-    width: 100%;
-    margin: auto
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 #min-var-table {
-    align-self: center;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #f2f2f2;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.correlation, .correlation-div-1, .correlation-div-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correlation {
+    margin-top: 20px;
+}
+
+#reset-correl, #raise-correl, #reduce-correl {
+    border: 1px solid #f2f2f2;
+    background-color: #1c1c1c;
+    color: #f2f2f2;
+    height: 30px;
+    line-height: 30px;
+}
+
+#raise-correl, #reduce-correl {
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px;
+}
+
+#reset-correl {
+    border-radius: 6px;
+    margin-left: 3px;
+}
+
+#current-correl {
+    margin-bottom: 0px;
+    margin-right: 3px;
+    background-color: #1c1c1c;
+    border: 1px solid #f2f2f2;
+    color: #f2f2f2;
+    padding-left: 6px;
+}
+
+#current-correl-label {
+    margin-right: 3px;
+}
+
+.current-data {
+    display: flex;
+    justify-content: center;
+}
+
+.current-data-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#table-head {
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .graphs {
+        flex-direction: column;
+    }
+
+    .weight-graph-container {
+        flex-direction: row;
+        width: 45vw;
+    }
+
+    .risk-return-container {
+        width: 95vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .weight-graph-container {
+        flex-direction: column;
+        width: 95vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .correlation {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .correlation-div-1 {
+        margin-bottom: 10px;
+    }
 }
