@@ -60,14 +60,27 @@
                     </div>
                 </div>
 
-                <div class="data-enter"></div>
+                <div class="graph-options">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="eff-front" id="eff-front" value="eff-front" onchange="calculate(false)">
+                        <label class="form-check-label" for="eff_front">Show Efficient Frontier</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="bounds" id="bounds" value="bounds" onchange="calculate(false)">
+                        <label class="form-check-label" for="bounds">Show Outer Bounds</label>
+                    </div>
+                </div>
+
+                <div class="data-enter">
+                    <button class="btn btn-primary mb-2" id="enter-data-screen" onclick="display_screen('data-screen')">Enter Custom Data</button>
+                </div>
 
                 <div class="current-data-container">
                     <button class="btn btn-primary mb-2" id="data-reveal" onclick="data_reveal()">Show Data</button>
                     <div class="current-data">
                         <table id="data-table" hidden>
                             <tr>
-                                <th colspan="3" id="table-head">Data Used</th>
+                                <th colspan="3" class="table-head">Data Used</th>
                             </tr>
                             <tr>
                                 <th>Time Period</th>
@@ -79,7 +92,32 @@
                 </div>
             </div>
 
-            <div class="data-screen" hidden></div>
+            <div class="data-screen" hidden>
+                <div id="data-screen-subcontainer">
+                    <div class="data-total-periods-container">
+                        <label for="total-periods" id="total-periods-label">Number of Periods: </label>
+                        <input type="number" id="total-periods" name="total-periods" onchange="total_periods()"></input>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-primary mb-2" id="data-reveal" onclick="submit_data()">Submit Data</button>
+                        <button class="btn btn-primary mb-2" id="data-reveal" onclick="display_screen('graph-screen')">Back</button>
+                    </div>
+                </div>
+
+                <div class="new-data">
+                    <table id="new-data-table">
+                        <tr>
+                            <th colspan="4" class="table-head">New Data</th>
+                        </tr>
+                        <tr>
+                            <th>Time Period</th>
+                            <th><input type="text" id="new-asset-1-name" placeholder="Asset 1 Name"></th>
+                            <th><input type="text" id="new-asset-2-name" placeholder="Asset 2 Name"></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>

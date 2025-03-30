@@ -105,8 +105,32 @@ td, th {
     margin-top: 40px;
 }
 
-#table-head {
+.table-head {
     text-align: center;
+}
+
+.graph-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.data-enter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#data-screen-subcontainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.new-data {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 @media (max-width: 1200px) {
