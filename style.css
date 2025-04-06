@@ -133,6 +133,10 @@ td, th {
     margin-top: 20px;
 }
 
+.new-asset {
+    max-width: 30vw;
+}
+
 @media (max-width: 1200px) {
     .graphs {
         flex-direction: column;
