@@ -436,11 +436,13 @@ function total_periods() {
             let asset_1_value = document.createElement("input")
             asset_1_value.setAttribute("type", "number")
             asset_1_value.setAttribute("id", "new-data-1-" + i)
+            asset_1_value.setAttribute("class", "new-asset")
 
             let asset_2_value_cell = document.createElement("td")
             let asset_2_value = document.createElement("input")
             asset_2_value.setAttribute("type", "number")
             asset_2_value.setAttribute("id", "new-data-2-" + i)
+            asset_2_value.setAttribute("class", "new-asset")
 
             asset_1_value_cell.appendChild(asset_1_value)
             asset_2_value_cell.appendChild(asset_2_value)
